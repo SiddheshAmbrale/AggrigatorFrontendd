@@ -1,0 +1,204 @@
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 90px;
+}
+
+.institution-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c63ff; 
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  height: 80px;
+  width: 80px;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.title-and-search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.title-and-search h2 {
+  margin-right: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination-info {
+  font-size: 14px;
+}
+
+/* Header actions on the right side */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-button {
+  background-color: #6c63ff; /* Violet button */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.record-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /*background-color: #f0f8ff; */
+}
+
+.record-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .record-list-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .record-list-grid {
+    grid-template-columns: 1fr; /* One column on very small screens */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title-and-search {
+    margin-bottom: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .header-actions {
+    margin-top: 10px;
+  }
+
+  .pagination-container {
+    margin-top: 10px;
+  }
+}
+
+.sidebar-icon {
+  margin-bottom: 20px; /* Adds 2-line space (approximately) between Home and Settings buttons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* set width based on your layout */
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f0f0f0; /* Button background color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px; /* Icon size */
+}
+
+.sidebar-icon i {
+  font-size: 24px; /* Adjust the size of the icon */
+}
+
+.sidebar-icon span {
+  margin-top: 5px; /* Adds some space between the icon and text */
+  font-size: 14px; /* Adjust the font size for the text */
+}
+/* down */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container i {
+  position: absolute;
+  left: 10px; /* Position the icon inside the left side of the input */
+  font-size: 16px; /* Adjust the size of the icon */
+  color: #6c63ff; /* Optional: Change icon color to match your theme */
+}
+
+.search-input {
+  padding-left: 30px; /* Create space for the icon inside the input */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px; /* Adjust width as needed */
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #6c63ff; /* Change border color when focused */
+  outline: none; /* Remove default focus outline */
+}
+
+.sidebar-icon .bi-house-fill,
+.sidebar-icon .bi-gear {
+  font-size: 16px; /* same size for both icons */
+}
